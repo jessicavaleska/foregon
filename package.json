@@ -1,0 +1,29 @@
+{
+  "name": "foregon",
+  "version": "1.0.0",
+  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvaleskasilva/foregon.git"
+  },
+  "author": "jvaleskasilva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvaleskasilva/foregon/issues"
+  },
+  "homepage": "https://github.com/jvaleskasilva/foregon#readme",
+  "devDependencies": {
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "node-modules": "^1.0.1"
+  }
+}

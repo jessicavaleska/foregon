@@ -1,0 +1,981 @@
+@import './_reset.scss';
+@import './_mixins.scss';
+
+$_white: #ffffff;
+$_black: #000000;
+$_black_2: #212121;
+$_gray: #6A6A6A;
+$_gray_2: #C4C4C4;
+$_gray_3: #828282;
+$_gray_4: #3A3A3A;
+$_gray_5: #4A4A4A;
+$_gray_6: #A2A2A2;
+$_green: #1CBE40;
+$_red: #e10e34;
+$_blue: #286CBC;
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $_white;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.content {
+  width: 90%;
+  height: 100%;
+  padding: 25px 0;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 100%;
+  height: 48px;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  color: $_blue;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid $_blue;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.btn-editar-perfil {
+    width: 100px;
+    height: 32px;
+    background-color: $_white;
+    border: 1px solid $_white;
+    font-size: 10px;
+    font-weight: 600;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    color: $_black;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+
+    &:focus {
+      color: $_black;
+    }
+  }
+
+  &.btn-mais-produtos {
+    margin-top: 25px;
+
+    &:focus {
+      color: $_blue;
+    }
+  }
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: 600;
+  color: $_gray_4;
+  margin-bottom: 5px;
+  @include display-flex(wrap, center, flex-start);
+
+  svg, img {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+  }
+}
+
+.subtitulo {
+  font-size: 12px;
+  color: $_gray_5;
+  line-height: 16px;
+}
+
+.avatar-cliente {
+  background-color: $_blue;
+  border-radius: 50%;
+  font-size: 19px;
+  color: $_white;
+  width: 60px;
+  height: 60px;
+  @include display-flex(wrap, center, center);
+}
+
+.score-cliente {
+  h2 {
+    font-size: 10px;
+    font-weight: 500;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    color: $_gray_3;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 9px;
+    color: $_gray;
+
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      color: $_green;
+    }
+  }
+}
+
+.anuidade, .taxa {
+  font-size: 12px;
+  font-weight: 500;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $_gray_6;
+  margin-top: 10px;
+
+  span {
+    color: $_gray_5;
+    font-weight: 600;
+  }
+}
+
+.nome {
+  font-size: 16px;
+  font-weight: 600;
+  color: $_gray_4;
+  margin-top: 5px;
+}
+
+.descricao {
+  font-size: 14px;
+  color: $_gray_5;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.recomendado {
+  p {
+    font-size: 12px;
+    color: $_blue;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    margin: 10px 0;
+  }
+
+  .estrelas-recomendadas {
+    @include display-flex(wrap, center, flex-start);
+
+    img {
+      width: 77px;
+      height: 11px;
+    }
+
+    span {
+      font-size: 10px;
+      color: $_gray_3;
+      letter-spacing: 1px;
+      margin-left: 5px;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+aside {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  background-color: $_white;
+  padding: 10px 0;
+  @include box-sizing;
+  @include display-flex(wrap, center, space-between);
+  box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.15);
+  @include transition(.5s);
+
+  .container-aside {
+    width: 95%;
+    margin: 0 auto;
+    @include display-flex(wrap, center, space-between);
+
+    .wrap {
+      @include display-flex;
+    }
+
+    .avatar-cliente {
+      width: 40px;
+      height: 40px;
+      font-size: 13px;
+      margin-right: 15px;
+    }
+
+    .editar-perfil-cliente {
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $_gray_2;
+      }
+    }
+  }
+}
+
+header {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 15;
+  background-color: $_white;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.17);
+  @include transition(.5s);
+
+  ul {
+    @include display-flex(wrap, center, center);
+
+    li {
+      width: 33.3%;
+      text-align: center;
+
+      a {
+        padding: 10px 0;
+        border-bottom: 3px solid $_white;
+
+        p {
+          @include fontsize(9);
+          color: $_gray;
+          margin-top: 5px;
+        }
+
+        svg {
+          width: 25px;
+          height: 25px;
+          fill: $_gray;
+        }
+
+        &.active {
+          border-color: $_blue;
+
+          p {
+            color: $_blue;
+          }
+
+          svg {
+            fill: $_blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+nav {
+  &.menu-principal {
+    width: 100%;
+    height: 100vh;
+    background: $_gray url('../imagem/bg/bg_menu.jpg') center top no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: -150%;
+    z-index: 10;
+    @include transition(.5s);
+
+    &.open {
+      left: 0;
+      @include transition(.5s);
+    }
+
+    .top {
+      width: 100%;
+      padding: 20px;
+      @include box-sizing;
+      @include display-flex(wrap, center, space-between);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+
+      .btn-close-menu {
+        cursor: pointer;
+      }
+    }
+
+    .links-menu {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      @include display-flex(wrap, flex-start, center, column);
+
+      li {
+        a {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 60px;
+          font-weight: bold;
+          color: $_white;
+          padding: 10px;
+          cursor: pointer;
+          @include transition;
+
+          &:hover {
+            background-color: $_white;
+            color: $_red;
+            @include transition;
+          }
+
+          &.inativo {
+            cursor: inherit;
+            opacity: .3;
+          }
+        }
+
+        &.redes-sociais-menu {
+          margin-top: 30px;
+
+          a {
+            display: inline;
+            margin-right: 15px;
+
+            &:last-child {
+              margin-right: 0px;
+            }
+
+            i {
+              font-size: 30px;
+              color: $_white;
+            }
+
+            &:hover {
+              background-color: transparent;
+              color: $_white;
+            }
+          }
+
+          &:hover {
+            a {
+              opacity: .5;
+              @include transition(0.5s);
+
+              &:hover {
+                opacity: 1;
+                @include transition(0.5s);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  width: 100%;
+
+  &.home {
+    height: auto;
+
+    .topo {
+      width: 100%;
+      height: 95px;
+      background: url('../imagem/bg/foregon-fit__cover_mobile.svg') center top no-repeat;
+      background-size: cover;
+
+      .content {
+        padding: 0;
+        @include display-flex(wrap, flex-end, space-between);
+
+        .avatar-cliente {
+          border: 5px solid $_white;
+          margin-bottom: -25px;
+        }
+
+        .btn-editar-perfil {
+          margin-bottom: -15px;
+        }
+      }
+    }
+
+    .dados-score {
+      .content {
+        padding: 50px 0 25px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+        .dados-cliente {
+          width: 100%;
+
+          .nome-cliente {
+            font-weight: 600;
+            font-size: 16px;
+            color: $_black_2;
+            line-height: 25px;
+          }
+
+          .consulta {
+            font-weight: 500;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-variant: small-caps;
+            color: $_gray_3;
+          }
+
+          .score {
+            font-weight: 600;
+            font-size: 16px;
+            color: $_green;
+            line-height: 40px;
+
+            span {
+              font-size: 10px;
+              color: $_gray_5;
+
+              &.valor-score {
+                font-size: 20px;
+                color: $_green;
+              }
+            }
+          }
+
+          .wrap {
+            @include display-flex(wrap, center, flex-start);
+
+            .situacao-score {
+              border: 0.75px solid $_green;
+              box-sizing: border-box;
+              border-radius: 8px;
+              font-weight: 600;
+              font-size: 8px;
+              text-transform: uppercase;
+              font-variant: small-caps;
+              color: $_green;
+              padding: 2px 8px;
+            }
+
+            svg {
+              width: 13px;
+              height: 10px;
+              fill: $_gray_3;
+              margin: 0 10px;
+            }
+
+            a {
+              font-style: italic;
+              font-size: 10px;
+              color: $_gray_3;
+              text-decoration: underline !important;
+            }
+          }
+        }
+
+        .score-explicacao {
+          width: calc(50% - 10px);
+
+          h2 {
+            font-weight: 600;
+            font-size: 16px;
+            color: $_blue;
+            margin-bottom: 15px;
+          }
+
+          p {
+            line-height: 21px;
+            font-size: 14px;
+            color: $_gray;
+
+            a {
+              font-weight: 500;
+              font-size: 14px;
+              text-transform: uppercase;
+              font-variant: small-caps;
+              color: $_blue;
+              cursor: pointer;
+            }
+          }
+
+          img {
+            width: 75%;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &.cartao {
+    width: 100%;
+    height: auto;
+
+    .item-cartao {
+      margin-top: 20px;
+    }
+
+    &.cartao-destaque {
+      .content {
+        width: 100%;
+
+        .titulo, .subtitulo, .anuidade, .nome, .descricao, .recomendado {
+          width: 90%;
+          margin: 5px auto 0;
+        }
+      }
+    }
+
+    &.cartao-credito {
+      .content {
+        .lista-cartao {
+          @include display-flex(wrap, flex-start, space-between);
+
+          .item-cartao {
+            width: calc(50% - 10px);
+          }
+        }
+      }
+    }
+
+    &.cartao-pre-pago {
+      .content {
+        .lista-cartao {
+          .item-cartao {
+            margin-top: 0;
+            margin-bottom: 35px;
+            @include display-flex(wrap, flex-start, space-between);
+
+            &:first-child {
+              margin-top: 20px;
+            }
+
+            .imagem-cartao {
+              width: calc(40% - 10px);
+            }
+
+            .infos {
+              width: calc(60% - 10px);
+
+              .taxa {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.final {
+    padding: 50px 0;
+
+    .content {
+      width: 100%;
+    }
+
+    .final-imagem {
+      width: 100%;
+      height: 205px;
+      background: url('../imagem/bg/foregon-fit__rodape.svg') center top no-repeat;
+      background-size: cover;
+      background-position-x: -35px;
+    }
+
+    .final-texto {
+      text-align: center;
+      margin-top: 25px;
+
+      h2 {
+        font-weight: 600;
+        font-size: 24px;
+        color: $_gray_4;
+      }
+
+      p {
+        line-height: 20px;
+        font-size: 14px;
+        color: $_gray;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 20px 0 50px;
+
+  .content {
+    width: 100%;
+    margin: 0 auto;
+
+    ul {
+      @include display-flex(wrap, center, center);
+
+      li {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: #A2A2A2;
+
+        a {
+          font-size: 12px;
+          color: #A2A2A2;
+          text-decoration: underline !important;
+          @include transition;
+
+          &:hover {
+            color: #909090;
+            @include transition;
+          }
+        }
+
+        p {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  section {
+    &.home {
+      .topo {
+        height: 200px;
+      }
+    }
+
+    &.final {
+      .final-imagem {
+        height: 300px;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-desktop {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: block;
+  }
+
+  .content {
+    width: 60%;
+  }
+
+  .btn {
+    width: 350px;
+
+    &.btn-editar-perfil {
+      @include transition;
+
+      &:hover {
+        @include transform(scale(1.1));
+        @include transition;
+      }
+    }
+
+    &.btn-mais-produtos {
+      margin: 20px auto 0;
+      @include display-flex;
+      @include transition;
+
+      &:hover {
+        background-color: $_blue;
+        color: $_white;
+        @include transition;
+      }
+    }
+  }
+
+  header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    bottom: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+    @include display-flex(wrap, center, space-between);
+
+    &.hide-mobile {
+      display: flex !important;
+    }
+
+    .area-menu {
+      width: 17%;
+      height: 100%;
+      padding: 0 15px;
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
+      @include display-flex(wrap, center, space-between);
+
+      svg {
+        width: 23px;
+        height: 18px;
+        fill: $_blue;
+      }
+
+      .logo {
+        img {
+          width: 140px;
+        }
+      }
+    }
+
+    .area-nav {
+      width: 73%;
+      height: 100%;
+      @include display-flex;
+
+      a {
+        width: 50%;
+        height: 100%;
+        padding: 0 40px;
+        border-bottom: 3px solid $_white;
+        cursor: pointer;
+        @include display-flex(wrap, center, flex-start);
+        @include transition;
+
+        &:first-child {
+          border-right: 1px solid rgba(0, 0, 0, 0.12);
+        }
+
+        svg {
+          width: 25px;
+          height: 25px;
+          fill: $_gray;
+          margin-right: 15px;
+        }
+
+        h4 {
+          font-weight: 600;
+          font-size: 16px;
+          color: $_gray_5;
+        }
+
+        p {
+          @include fontsize(10);
+          margin-top: 5px;
+        }
+
+        &:hover {
+          border-bottom: 3px solid $_blue;
+          @include transition;
+        }
+      }
+    }
+
+    .area-login {
+      width: 10%;
+      height: 100%;
+      padding: 0 15px;
+      border-left: 1px solid rgba(0, 0, 0, 0.12);
+      @include display-flex;
+
+      .avatar-cliente {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+        margin-right: 20px;
+      }
+
+      img {
+        width: 10px;
+        height: 6px;
+      }
+    }
+  }
+
+  section {
+    &.home {
+      .topo {
+        width: 70%;
+        height: 150px;
+        margin: 150px auto 0;
+        background: url('../imagem/bg/foregon-fit__cover.svg') center top no-repeat;
+        background-size: cover;
+
+        .content {
+          width: 85%;
+
+          .avatar-cliente {
+            width: 90px;
+            height: 90px;
+            font-size: 24px;
+            margin-bottom: -35px;
+          }
+        }
+      }
+
+      .dados-score {
+        width: 60%;
+        margin: 0 auto;
+
+        .content {
+          width: 100%;
+          @include display-flex(wrap, flex-start, space-between);
+
+          .dados-cliente {
+            width: calc(50% - 10px);
+
+            .nome-cliente {
+              font-size: 20px;
+              line-height: 35px;
+              margin-bottom: 20px;
+            }
+
+            .consulta {
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+
+            .score {
+              font-size: 24px;
+              letter-spacing: 0px;
+
+              span {
+                font-size: 14px;
+
+                &.valor-score {
+                  font-size: 30px;
+                }
+              }
+            }
+
+            .wrap {
+              @include display-flex(wrap, center, flex-start);
+
+              .situacao-score {
+                border-radius: 50px;
+                font-size: 12px;
+                padding: 3px 15px;
+              }
+
+              a {
+                width: 100%;
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.cartao {
+      width: 100%;
+      height: auto;
+
+      .item-cartao {
+        margin-top: 20px;
+        margin-bottom: 25px;
+      }
+
+      &.cartao-destaque {
+        .content {
+          width: 60%;
+
+          .titulo, .subtitulo, .anuidade, .nome, .descricao, .recomendado {
+            width: 100%;
+          }
+
+          .item-cartao {
+            @include display-flex(wrap, center, space-between);
+
+            .cartao-destaque, .infos {
+              width: calc(50% - 20px);
+            }
+          }
+        }
+      }
+
+      &.cartao-credito {
+        .content {
+          .lista-cartao {
+            @include display-flex(wrap, flex-start, space-between);
+
+            .item-cartao {
+              width: calc(33.3% - 65px);
+            }
+          }
+        }
+      }
+
+      &.cartao-pre-pago {
+        .content {
+          .lista-cartao {
+            @include display-flex(wrap, flex-start, space-between);
+
+            .item-cartao {
+              width: calc(33.3% - 65px);
+              margin-top: 20px;
+
+              &:first-child {
+                //margin-top: 20px;
+              }
+
+              .imagem-cartao {
+                width: 100%;
+              }
+
+              .infos {
+                width: 100%;
+
+                .taxa {
+                  margin-top: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.final {
+      padding: 50px 0;
+
+      .content {
+        width: 50%;
+        @include display-flex(wrap, center, space-between);
+      }
+
+      .final-imagem, .final-texto {
+        //width: 50%;
+      }
+
+      .final-imagem {
+        width: calc(60% - 10px);
+        height: 205px;
+        background: url('../imagem/bg/foregon-fit__rodape.svg') center top no-repeat;
+        background-size: contain;
+        background-position-x: 0;
+      }
+
+      .final-texto {
+        width: 40%;
+        text-align: justify;
+        margin: 0;
+      }
+    }
+  }
+
+  footer {
+    .content {
+      ul {
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
