@@ -19,8 +19,7 @@ class Home extends CI_Controller {
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
 
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
 
         $this->load->helper('security');

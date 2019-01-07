@@ -162,7 +162,7 @@ body {
   line-height: 16px;
 }
 
-.avatar-cliente {
+.avatar {
   background-color: #286CBC;
   border-radius: 50%;
   font-size: 19px;
@@ -181,7 +181,7 @@ body {
   -webkit-align-content: center;
 }
 
-.score-cliente h2 {
+.score h2 {
   font-size: 10px;
   font-weight: 500;
   font-variant: small-caps;
@@ -190,12 +190,12 @@ body {
   margin-bottom: 5px;
 }
 
-.score-cliente h3 {
+.score h3 {
   font-size: 9px;
   color: #6A6A6A;
 }
 
-.score-cliente h3 span {
+.score h3 span {
   font-size: 16px;
   font-weight: 600;
   color: #1CBE40;
@@ -327,7 +327,7 @@ aside .container-aside .wrap {
   -webkit-align-content: center;
 }
 
-aside .container-aside .avatar-cliente {
+aside .container-aside .avatar {
   width: 40px;
   height: 40px;
   font-size: 13px;
@@ -548,14 +548,14 @@ section.home {
   height: auto;
 }
 
-section.home .topo {
+section.home .header_home {
   width: 100%;
   height: 95px;
   background: url("../imagem/bg/foregon-fit__cover_mobile.svg") center top no-repeat;
   background-size: cover;
 }
 
-section.home .topo .content {
+section.home .header_home .content {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -569,32 +569,32 @@ section.home .topo .content {
   -webkit-align-content: center;
 }
 
-section.home .topo .content .avatar-cliente {
+section.home .header_home .content .avatar {
   border: 5px solid #ffffff;
   margin-bottom: -25px;
 }
 
-section.home .topo .content .btn-editar-perfil {
+section.home .header_home .content .btn-editar-perfil {
   margin-bottom: -15px;
 }
 
-section.home .dados-score .content {
+section.home .infos_home .content {
   padding: 50px 0 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-section.home .dados-score .content .dados-cliente {
+section.home .infos_home .content .cliente_info {
   width: 100%;
 }
 
-section.home .dados-score .content .dados-cliente .nome-cliente {
+section.home .infos_home .content .cliente_info .cliente_nome {
   font-weight: 600;
   font-size: 16px;
   color: #212121;
   line-height: 25px;
 }
 
-section.home .dados-score .content .dados-cliente .consulta {
+section.home .infos_home .content .cliente_info .cliente_consulta {
   font-weight: 500;
   font-size: 10px;
   text-transform: uppercase;
@@ -602,24 +602,24 @@ section.home .dados-score .content .dados-cliente .consulta {
   color: #828282;
 }
 
-section.home .dados-score .content .dados-cliente .score {
+section.home .infos_home .content .cliente_info .cliente_score {
   font-weight: 600;
   font-size: 16px;
   color: #1CBE40;
   line-height: 40px;
 }
 
-section.home .dados-score .content .dados-cliente .score span {
+section.home .infos_home .content .cliente_info .cliente_score span {
   font-size: 10px;
   color: #4A4A4A;
 }
 
-section.home .dados-score .content .dados-cliente .score span.valor-score {
+section.home .infos_home .content .cliente_info .cliente_score span.cliente_score-valor {
   font-size: 20px;
   color: #1CBE40;
 }
 
-section.home .dados-score .content .dados-cliente .wrap {
+section.home .infos_home .content .cliente_info .wrap {
   display: flex;
   flex-wrap: wrap;
   -webkit-align-items: center;
@@ -632,7 +632,7 @@ section.home .dados-score .content .dados-cliente .wrap {
   -webkit-align-content: center;
 }
 
-section.home .dados-score .content .dados-cliente .wrap .situacao-score {
+section.home .infos_home .content .cliente_info .wrap .cliente_situacao {
   border: 0.75px solid #1CBE40;
   box-sizing: border-box;
   border-radius: 8px;
@@ -644,38 +644,38 @@ section.home .dados-score .content .dados-cliente .wrap .situacao-score {
   padding: 2px 8px;
 }
 
-section.home .dados-score .content .dados-cliente .wrap svg {
+section.home .infos_home .content .cliente_info .wrap svg {
   width: 13px;
   height: 10px;
   fill: #828282;
   margin: 0 10px;
 }
 
-section.home .dados-score .content .dados-cliente .wrap a {
+section.home .infos_home .content .cliente_info .wrap a {
   font-style: italic;
   font-size: 10px;
   color: #828282;
   text-decoration: underline !important;
 }
 
-section.home .dados-score .content .score-explicacao {
+section.home .infos_home .content .sobre_score {
   width: calc(50% - 10px);
 }
 
-section.home .dados-score .content .score-explicacao h2 {
+section.home .infos_home .content .sobre_score h2 {
   font-weight: 600;
   font-size: 16px;
   color: #286CBC;
   margin-bottom: 15px;
 }
 
-section.home .dados-score .content .score-explicacao p {
+section.home .infos_home .content .sobre_score p {
   line-height: 21px;
   font-size: 14px;
   color: #6A6A6A;
 }
 
-section.home .dados-score .content .score-explicacao p a {
+section.home .infos_home .content .sobre_score p a {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
@@ -684,30 +684,30 @@ section.home .dados-score .content .score-explicacao p a {
   cursor: pointer;
 }
 
-section.home .dados-score .content .score-explicacao img {
+section.home .infos_home .content .sobre_score img {
   width: 75%;
   margin-top: 30px;
 }
 
-section.cartao {
+section.recomendacoes {
   width: 100%;
   height: auto;
 }
 
-section.cartao .item-cartao {
+section.recomendacoes .item-cartao {
   margin-top: 20px;
 }
 
-section.cartao.cartao-destaque .content {
+section.recomendacoes.recomendacao_cartao-destaque .content {
   width: 100%;
 }
 
-section.cartao.cartao-destaque .content .titulo, section.cartao.cartao-destaque .content .subtitulo, section.cartao.cartao-destaque .content .anuidade, section.cartao.cartao-destaque .content .nome, section.cartao.cartao-destaque .content .descricao, section.cartao.cartao-destaque .content .recomendado {
+section.recomendacoes.recomendacao_cartao-destaque .content .titulo, section.recomendacoes.recomendacao_cartao-destaque .content .subtitulo, section.recomendacoes.recomendacao_cartao-destaque .content .anuidade, section.recomendacoes.recomendacao_cartao-destaque .content .nome, section.recomendacoes.recomendacao_cartao-destaque .content .descricao, section.recomendacoes.recomendacao_cartao-destaque .content .recomendado {
   width: 90%;
   margin: 5px auto 0;
 }
 
-section.cartao.cartao-credito .content .lista-cartao {
+section.recomendacoes.recomendacao_cartao-credito .content .lista-cartao {
   display: flex;
   flex-wrap: wrap;
   -webkit-align-items: flex-start;
@@ -720,11 +720,11 @@ section.cartao.cartao-credito .content .lista-cartao {
   -webkit-align-content: center;
 }
 
-section.cartao.cartao-credito .content .lista-cartao .item-cartao {
+section.recomendacoes.recomendacao_cartao-credito .content .lista-cartao .item-cartao {
   width: calc(50% - 10px);
 }
 
-section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao {
+section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao {
   margin-top: 0;
   margin-bottom: 35px;
   display: flex;
@@ -739,31 +739,31 @@ section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao {
   -webkit-align-content: center;
 }
 
-section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao:first-child {
+section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao:first-child {
   margin-top: 20px;
 }
 
-section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao .imagem-cartao {
+section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao .imagem-cartao {
   width: calc(40% - 10px);
 }
 
-section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao .infos {
+section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao .infos {
   width: calc(60% - 10px);
 }
 
-section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao .infos .taxa {
+section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao .infos .taxa {
   margin: 0;
 }
 
-section.final {
+section.aguarde {
   padding: 50px 0;
 }
 
-section.final .content {
+section.aguarde .content {
   width: 100%;
 }
 
-section.final .final-imagem {
+section.aguarde .aguarde_imagem {
   width: 100%;
   height: 205px;
   background: url("../imagem/bg/foregon-fit__rodape.svg") center top no-repeat;
@@ -771,18 +771,18 @@ section.final .final-imagem {
   background-position-x: -35px;
 }
 
-section.final .final-texto {
+section.aguarde .aguarde_texto {
   text-align: center;
   margin-top: 25px;
 }
 
-section.final .final-texto h2 {
+section.aguarde .aguarde_texto h2 {
   font-weight: 600;
   font-size: 24px;
   color: #3A3A3A;
 }
 
-section.final .final-texto p {
+section.aguarde .aguarde_texto p {
   line-height: 20px;
   font-size: 14px;
   color: #6A6A6A;
@@ -843,10 +843,10 @@ footer .content ul li p {
 }
 
 @media (min-width: 600px) {
-  section.home .topo {
+  section.home .header_home {
     height: 200px;
   }
-  section.final .final-imagem {
+  section.aguarde .aguarde_imagem {
     height: 300px;
     background-size: contain;
   }
@@ -918,6 +918,11 @@ footer .content ul li p {
     bottom: inherit;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: none;
+  }
+  header .menu-desktop {
+    width: 100%;
+    height: 100%;
+    display: flex !important;
     display: flex;
     flex-wrap: wrap;
     -webkit-align-items: center;
@@ -929,13 +934,10 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  header.hide-mobile {
-    display: flex !important;
-  }
-  header .area-menu {
+  header .menu-desktop .area-menu {
     width: 17%;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 10px;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     display: flex;
     flex-wrap: wrap;
@@ -948,15 +950,15 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  header .area-menu svg {
+  header .menu-desktop .area-menu svg {
     width: 23px;
     height: 18px;
     fill: #286CBC;
   }
-  header .area-menu .logo img {
-    width: 140px;
+  header .menu-desktop .area-menu .logo img {
+    width: 110px;
   }
-  header .area-nav {
+  header .menu-desktop .area-nav {
     width: 73%;
     height: 100%;
     display: flex;
@@ -970,7 +972,7 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  header .area-nav a {
+  header .menu-desktop .area-nav a {
     width: 50%;
     height: 100%;
     padding: 0 40px;
@@ -992,26 +994,26 @@ footer .content ul li p {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
   }
-  header .area-nav a:first-child {
+  header .menu-desktop .area-nav a:first-child {
     border-right: 1px solid rgba(0, 0, 0, 0.12);
   }
-  header .area-nav a svg {
+  header .menu-desktop .area-nav a svg {
     width: 25px;
     height: 25px;
     fill: #6A6A6A;
     margin-right: 15px;
   }
-  header .area-nav a h4 {
+  header .menu-desktop .area-nav a h4 {
     font-weight: 600;
     font-size: 16px;
     color: #4A4A4A;
   }
-  header .area-nav a p {
+  header .menu-desktop .area-nav a p {
     font-size: 10px;
     font-size: 0.625rem;
     margin-top: 5px;
   }
-  header .area-nav a:hover {
+  header .menu-desktop .area-nav a:hover {
     border-bottom: 3px solid #286CBC;
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -1019,10 +1021,10 @@ footer .content ul li p {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
   }
-  header .area-login {
+  header .menu-desktop .area-login {
     width: 10%;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 10px;
     border-left: 1px solid rgba(0, 0, 0, 0.12);
     display: flex;
     flex-wrap: wrap;
@@ -1035,37 +1037,37 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  header .area-login .avatar-cliente {
+  header .menu-desktop .area-login .avatar {
     width: 40px;
     height: 40px;
     font-size: 12px;
     margin-right: 20px;
   }
-  header .area-login img {
+  header .menu-desktop .area-login img {
     width: 10px;
     height: 6px;
   }
-  section.home .topo {
+  section.home .header_home {
     width: 70%;
     height: 150px;
     margin: 150px auto 0;
     background: url("../imagem/bg/foregon-fit__cover.svg") center top no-repeat;
     background-size: cover;
   }
-  section.home .topo .content {
+  section.home .header_home .content {
     width: 85%;
   }
-  section.home .topo .content .avatar-cliente {
+  section.home .header_home .content .avatar {
     width: 90px;
     height: 90px;
     font-size: 24px;
     margin-bottom: -35px;
   }
-  section.home .dados-score {
+  section.home .infos_home {
     width: 60%;
     margin: 0 auto;
   }
-  section.home .dados-score .content {
+  section.home .infos_home .content {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1078,29 +1080,29 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  section.home .dados-score .content .dados-cliente {
+  section.home .infos_home .content .cliente_info {
     width: calc(50% - 10px);
   }
-  section.home .dados-score .content .dados-cliente .nome-cliente {
+  section.home .infos_home .content .cliente_info .cliente_nome {
     font-size: 20px;
     line-height: 35px;
     margin-bottom: 20px;
   }
-  section.home .dados-score .content .dados-cliente .consulta {
+  section.home .infos_home .content .cliente_info .cliente_consulta {
     font-size: 12px;
     margin-bottom: 10px;
   }
-  section.home .dados-score .content .dados-cliente .score {
+  section.home .infos_home .content .cliente_info .cliente_score {
     font-size: 24px;
     letter-spacing: 0px;
   }
-  section.home .dados-score .content .dados-cliente .score span {
+  section.home .infos_home .content .cliente_info .cliente_score span {
     font-size: 14px;
   }
-  section.home .dados-score .content .dados-cliente .score span.valor-score {
+  section.home .infos_home .content .cliente_info .cliente_score span.cliente_score-valor {
     font-size: 30px;
   }
-  section.home .dados-score .content .dados-cliente .wrap {
+  section.home .infos_home .content .cliente_info .wrap {
     display: flex;
     flex-wrap: wrap;
     -webkit-align-items: center;
@@ -1112,30 +1114,30 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  section.home .dados-score .content .dados-cliente .wrap .situacao-score {
+  section.home .infos_home .content .cliente_info .wrap .cliente_situacao {
     border-radius: 50px;
     font-size: 12px;
     padding: 3px 15px;
   }
-  section.home .dados-score .content .dados-cliente .wrap a {
+  section.home .infos_home .content .cliente_info .wrap a {
     width: 100%;
     margin-top: 20px;
   }
-  section.cartao {
+  section.recomendacoes {
     width: 100%;
     height: auto;
   }
-  section.cartao .item-cartao {
+  section.recomendacoes .item-cartao {
     margin-top: 20px;
     margin-bottom: 25px;
   }
-  section.cartao.cartao-destaque .content {
+  section.recomendacoes.recomendacao_cartao-destaque .content {
     width: 60%;
   }
-  section.cartao.cartao-destaque .content .titulo, section.cartao.cartao-destaque .content .subtitulo, section.cartao.cartao-destaque .content .anuidade, section.cartao.cartao-destaque .content .nome, section.cartao.cartao-destaque .content .descricao, section.cartao.cartao-destaque .content .recomendado {
+  section.recomendacoes.recomendacao_cartao-destaque .content .titulo, section.recomendacoes.recomendacao_cartao-destaque .content .subtitulo, section.recomendacoes.recomendacao_cartao-destaque .content .anuidade, section.recomendacoes.recomendacao_cartao-destaque .content .nome, section.recomendacoes.recomendacao_cartao-destaque .content .descricao, section.recomendacoes.recomendacao_cartao-destaque .content .recomendado {
     width: 100%;
   }
-  section.cartao.cartao-destaque .content .item-cartao {
+  section.recomendacoes.recomendacao_cartao-destaque .content .item-cartao {
     display: flex;
     flex-wrap: wrap;
     -webkit-align-items: center;
@@ -1147,10 +1149,10 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  section.cartao.cartao-destaque .content .item-cartao .cartao-destaque, section.cartao.cartao-destaque .content .item-cartao .infos {
+  section.recomendacoes.recomendacao_cartao-destaque .content .item-cartao .cartao-destaque, section.recomendacoes.recomendacao_cartao-destaque .content .item-cartao .infos {
     width: calc(50% - 20px);
   }
-  section.cartao.cartao-credito .content .lista-cartao {
+  section.recomendacoes.recomendacao_cartao-credito .content .lista-cartao {
     display: flex;
     flex-wrap: wrap;
     -webkit-align-items: flex-start;
@@ -1162,10 +1164,10 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  section.cartao.cartao-credito .content .lista-cartao .item-cartao {
+  section.recomendacoes.recomendacao_cartao-credito .content .lista-cartao .item-cartao {
     width: calc(33.3% - 65px);
   }
-  section.cartao.cartao-pre-pago .content .lista-cartao {
+  section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao {
     display: flex;
     flex-wrap: wrap;
     -webkit-align-items: flex-start;
@@ -1177,23 +1179,23 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao {
+  section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao {
     width: calc(33.3% - 65px);
     margin-top: 20px;
   }
-  section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao .imagem-cartao {
+  section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao .imagem-cartao {
     width: 100%;
   }
-  section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao .infos {
+  section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao .infos {
     width: 100%;
   }
-  section.cartao.cartao-pre-pago .content .lista-cartao .item-cartao .infos .taxa {
+  section.recomendacoes.recomendacao_cartao-pre-pago .content .lista-cartao .item-cartao .infos .taxa {
     margin-top: 15px;
   }
-  section.final {
+  section.aguarde {
     padding: 50px 0;
   }
-  section.final .content {
+  section.aguarde .content {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
@@ -1206,19 +1208,28 @@ footer .content ul li p {
     align-content: center;
     -webkit-align-content: center;
   }
-  section.final .final-imagem {
+  section.aguarde .aguarde_imagem {
     width: calc(60% - 10px);
     height: 205px;
     background: url("../imagem/bg/foregon-fit__rodape.svg") center top no-repeat;
     background-size: contain;
     background-position-x: 0;
   }
-  section.final .final-texto {
+  section.aguarde .aguarde_texto {
     width: 40%;
     text-align: justify;
     margin: 0;
   }
   footer .content ul li a {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .menu-desktop .area-menu {
+    padding: 0 15px;
+  }
+  header .menu-desktop .area-menu .logo img {
+    width: 140px;
   }
 }

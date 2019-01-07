@@ -1,26 +1,26 @@
 <section class="home">
-    <div class="topo">
+    <div class="header_home">
         <div class="content">
-            <div class="avatar-cliente">FS</div>
+            <div class="avatar">FS</div>
 
             <button class="btn btn-editar-perfil">EDITAR perfil</button>
         </div>
     </div>
 
-    <div class="dados-score">
+    <div class="infos_home">
         <div class="content">
-            <div class="dados-cliente">
-                <h1 class="nome-cliente">Felipe Smith</h1>
-                <h3 class="consulta">CONSULTADO EM 25/02/18</h3>
-                <h2 class="score">Seu score é <span class="valor-score">920</span> <span>/ 1000</span></h2>
+            <div class="cliente_info dados-cliente">
+                <h1 class="cliente_nome">Felipe Smith</h1>
+                <h3 class="cliente_consulta">CONSULTADO EM 25/02/18</h3>
+                <h2 class="cliente_score">Seu score é <span class="cliente_score-valor">920</span> <span>/ 1000</span></h2>
                 <div class="wrap">
-                    <span class="situacao-score">EXCELENTE</span>
+                    <span class="cliente_situacao">EXCELENTE</span>
                     <svg class="hide-desktop"><use xlink:href="#arrow"></use></svg>
                     <a href="">veja como seu score é calculado</a>
                 </div>
             </div>
 
-            <div class="score-explicacao hide-mobile">
+            <div class="sobre_score hide-mobile">
                 <h2>O que é score de crédito?</h2>
                 <p>O score é uma das ferramentas usadas por instituições financeiras na decisão de aprovar ou não o crédito. <a>SAIBA MAIS</a></p>
 
@@ -30,7 +30,7 @@
     </div>
 </section>
 
-<section class="cartao cartao-destaque">
+<section class="recomendacoes recomendacao_cartao-destaque">
     <div class="content">
         <h1 class="titulo">Cartão em destaque <img src="<?= base_url("assets/imagem/icone/destaque.svg") ?>" alt="" />
         <h2 class="subtitulo">Este produto foi selecionado dentre os melhores</h2>
@@ -52,7 +52,7 @@
     </div>
 </section>
 
-<section class="cartao cartao-credito">
+<section class="recomendacoes recomendacao_cartao-credito">
     <div class="content">
         <h1 class="titulo">Cartões de crédito</h1>
         <h2 class="subtitulo">Selecionamos os cartões ideais para o seu perfil</h2>
@@ -111,7 +111,7 @@
     </div>
 </section>
 
-<section class="cartao cartao-pre-pago">
+<section class="recomendacoes recomendacao_cartao-pre-pago">
     <div class="content">
         <h1 class="titulo">Cartões pré-pagos</h1>
         <h2 class="subtitulo">Selecionamos os cartões pré-pagos ideais para o seu perfil</h2>
@@ -167,10 +167,10 @@
     </div>
 </section>
 
-<section class="final">
+<section class="aguarde">
     <div class="content">
-        <div class="final-imagem"></div>
-        <div class="final-texto">
+        <div class="aguarde_imagem"></div>
+        <div class="aguarde_texto">
             <h2>Você chegou ao final</h2>
             <p>Nossos especialistas estão separando novos produtos financeiros para o seu perfil, fique ligado!</p>
         </div>

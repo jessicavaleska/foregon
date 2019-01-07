@@ -24,12 +24,72 @@
 
 <body>
 
+<header id="menu">
+    <div class="menu-mobile hide-desktop">
+        <ul>
+            <li>
+                <a class="link-menu active" onclick="$('html,body').animate({scrollTop: $('.cartao-destaque').offset().top}, 1500);">
+                    <svg><use xlink:href="#prize-stroke"></use></svg>
+                    <p>RECOMENDADOS</p>
+                </a>
+            </li>
+            <li>
+                <a class="link-menu" onclick="$('html,body').animate({scrollTop: $('body').offset().top - 500}, 1000);">
+                    <svg><use xlink:href="#credit-score"></use></svg>
+                    <p>SCORE</p>
+                </a>
+            </li>
+            <li>
+                <a class="">
+                    <svg><use xlink:href="#menu"></use></svg>
+                    <p>MENU</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu-desktop hide-mobile">
+        <div class="area-menu">
+            <a class="btn-open-menu">
+                <svg><use xlink:href="#menu-2"></use></svg>
+            </a>
+
+            <div class="logo">
+                <img src="<?= base_url('assets/imagem/logo/foregon--id.svg') ?>" alt="Logo <?= NOME_CLIENTE ?>"/>
+            </div>
+        </div>
+
+        <div class="area-nav">
+            <a class="link-menu active" onclick="$('html,body').animate({scrollTop: $('.cartao-destaque').offset().top}, 1500);">
+                <svg><use xlink:href="#prize-stroke"></use></svg>
+                <div class="wrap">
+                    <h4>RECOMENDADOS</h4>
+                    <p>produtos que combinam com você.</p>
+                </div>
+            </a>
+
+            <a class="link-menu" onclick="$('html,body').animate({scrollTop: $('body').offset().top + 100}, 1500);">
+                <svg><use xlink:href="#credit-score"></use></svg>
+                <div class="wrap">
+                    <h4>SCORE</h4>
+                    <p>saiba como aumentar o seu.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="area-login">
+            <div class="avatar">FS</div>
+            <img src="<?= base_url('assets/imagem/icone/arrow--down.svg') ?>" alt=""/>
+        </div>
+    </div>
+</header>
+
 <aside id="aside-score" class="hide-desktop">
     <div class="container-aside">
         <div class="wrap">
-            <div class="avatar-cliente">FS</div>
+            <div class="avatar">FS</div>
 
-            <div class="score-cliente">
+            <div class="score">
                 <h2>Score de crédito</h2>
                 <h3><span>920</span> / 1000</h3>
             </div>
@@ -40,61 +100,3 @@
         </div>
     </div>
 </aside>
-
-<header id="header-bottom" class="hide-desktop">
-    <ul>
-        <li>
-            <a class="link-menu active" onclick="$('html,body').animate({scrollTop: $('body').offset().top}, 1500);">
-                <svg><use xlink:href="#prize-stroke"></use></svg>
-                <p>RECOMENDADOS</p>
-            </a>
-        </li>
-        <li>
-            <a class="link-menu" onclick="$('html,body').animate({scrollTop: $('.cartao-destaque').offset().top}, 1500);">
-                <svg><use xlink:href="#credit-score"></use></svg>
-                <p>SCORE</p>
-            </a>
-        </li>
-        <li>
-            <a class="">
-                <svg><use xlink:href="#menu"></use></svg>
-                <p>MENU</p>
-            </a>
-        </li>
-    </ul>
-</header>
-
-<header id="header-menu" class="hide-mobile">
-    <div class="area-menu">
-        <a class="btn-open-menu">
-            <svg><use xlink:href="#menu-2"></use></svg>
-        </a>
-
-        <div class="logo">
-            <img src="<?= base_url('assets/imagem/logo/foregon--id.svg') ?>" alt="Logo <?= NOME_CLIENTE ?>"/>
-        </div>
-    </div>
-
-    <div class="area-nav">
-        <a class="link-menu active" onclick="$('html,body').animate({scrollTop: $('body').offset().top}, 1500);">
-            <svg><use xlink:href="#prize-stroke"></use></svg>
-            <div class="wrap">
-                <h4>RECOMENDADOS</h4>
-                <p>produtos que combinam com você.</p>
-            </div>
-        </a>
-
-        <a class="link-menu" onclick="$('html,body').animate({scrollTop: $('.cartao-destaque').offset().top}, 1500);">
-            <svg><use xlink:href="#credit-score"></use></svg>
-            <div class="wrap">
-                <h4>SCORE</h4>
-                <p>saiba como aumentar o seu.</p>
-            </div>
-        </a>
-    </div>
-
-    <div class="area-login">
-        <div class="avatar-cliente">FS</div>
-        <img src="<?= base_url('assets/imagem/icone/arrow--down.svg') ?>" alt=""/>
-    </div>
-</header>

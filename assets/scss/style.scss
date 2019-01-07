@@ -99,7 +99,7 @@ body {
   line-height: 16px;
 }
 
-.avatar-cliente {
+.avatar {
   background-color: $_blue;
   border-radius: 50%;
   font-size: 19px;
@@ -109,7 +109,7 @@ body {
   @include display-flex(wrap, center, center);
 }
 
-.score-cliente {
+.score {
   h2 {
     font-size: 10px;
     font-weight: 500;
@@ -215,7 +215,7 @@ aside {
       @include display-flex;
     }
 
-    .avatar-cliente {
+    .avatar {
       width: 40px;
       height: 40px;
       font-size: 13px;
@@ -386,7 +386,7 @@ section {
   &.home {
     height: auto;
 
-    .topo {
+    .header_home {
       width: 100%;
       height: 95px;
       background: url('../imagem/bg/foregon-fit__cover_mobile.svg') center top no-repeat;
@@ -396,7 +396,7 @@ section {
         padding: 0;
         @include display-flex(wrap, flex-end, space-between);
 
-        .avatar-cliente {
+        .avatar {
           border: 5px solid $_white;
           margin-bottom: -25px;
         }
@@ -407,22 +407,22 @@ section {
       }
     }
 
-    .dados-score {
+    .infos_home {
       .content {
         padding: 50px 0 25px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
-        .dados-cliente {
+        .cliente_info {
           width: 100%;
 
-          .nome-cliente {
+          .cliente_nome {
             font-weight: 600;
             font-size: 16px;
             color: $_black_2;
             line-height: 25px;
           }
 
-          .consulta {
+          .cliente_consulta {
             font-weight: 500;
             font-size: 10px;
             text-transform: uppercase;
@@ -430,7 +430,7 @@ section {
             color: $_gray_3;
           }
 
-          .score {
+          .cliente_score {
             font-weight: 600;
             font-size: 16px;
             color: $_green;
@@ -440,7 +440,7 @@ section {
               font-size: 10px;
               color: $_gray_5;
 
-              &.valor-score {
+              &.cliente_score-valor {
                 font-size: 20px;
                 color: $_green;
               }
@@ -450,7 +450,7 @@ section {
           .wrap {
             @include display-flex(wrap, center, flex-start);
 
-            .situacao-score {
+            .cliente_situacao {
               border: 0.75px solid $_green;
               box-sizing: border-box;
               border-radius: 8px;
@@ -478,7 +478,7 @@ section {
           }
         }
 
-        .score-explicacao {
+        .sobre_score {
           width: calc(50% - 10px);
 
           h2 {
@@ -512,7 +512,7 @@ section {
     }
   }
 
-  &.cartao {
+  &.recomendacoes {
     width: 100%;
     height: auto;
 
@@ -520,7 +520,7 @@ section {
       margin-top: 20px;
     }
 
-    &.cartao-destaque {
+    &.recomendacao_cartao-destaque {
       .content {
         width: 100%;
 
@@ -531,7 +531,7 @@ section {
       }
     }
 
-    &.cartao-credito {
+    &.recomendacao_cartao-credito {
       .content {
         .lista-cartao {
           @include display-flex(wrap, flex-start, space-between);
@@ -543,7 +543,7 @@ section {
       }
     }
 
-    &.cartao-pre-pago {
+    &.recomendacao_cartao-pre-pago {
       .content {
         .lista-cartao {
           .item-cartao {
@@ -572,14 +572,14 @@ section {
     }
   }
 
-  &.final {
+  &.aguarde {
     padding: 50px 0;
 
     .content {
       width: 100%;
     }
 
-    .final-imagem {
+    .aguarde_imagem {
       width: 100%;
       height: 205px;
       background: url('../imagem/bg/foregon-fit__rodape.svg') center top no-repeat;
@@ -587,7 +587,7 @@ section {
       background-position-x: -35px;
     }
 
-    .final-texto {
+    .aguarde_texto {
       text-align: center;
       margin-top: 25px;
 
@@ -646,13 +646,13 @@ footer {
 @media (min-width: 600px) {
   section {
     &.home {
-      .topo {
+      .header_home {
         height: 200px;
       }
     }
 
-    &.final {
-      .final-imagem {
+    &.aguarde {
+      .aguarde_imagem {
         height: 300px;
         background-size: contain;
       }
@@ -705,99 +705,101 @@ footer {
     bottom: inherit;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: none;
-    @include display-flex(wrap, center, space-between);
 
-    &.hide-mobile {
-      display: flex !important;
-    }
-
-    .area-menu {
-      width: 17%;
+    .menu-desktop {
+      width: 100%;
       height: 100%;
-      padding: 0 15px;
-      border-right: 1px solid rgba(0, 0, 0, 0.12);
+      display: flex !important;
       @include display-flex(wrap, center, space-between);
 
-      svg {
-        width: 23px;
-        height: 18px;
-        fill: $_blue;
-      }
-
-      .logo {
-        img {
-          width: 140px;
-        }
-      }
-    }
-
-    .area-nav {
-      width: 73%;
-      height: 100%;
-      @include display-flex;
-
-      a {
-        width: 50%;
+      .area-menu {
+        width: 17%;
         height: 100%;
-        padding: 0 40px;
-        border-bottom: 3px solid $_white;
-        cursor: pointer;
-        @include display-flex(wrap, center, flex-start);
-        @include transition;
-
-        &:first-child {
-          border-right: 1px solid rgba(0, 0, 0, 0.12);
-        }
+        padding: 0 10px;
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        @include display-flex(wrap, center, space-between);
 
         svg {
-          width: 25px;
-          height: 25px;
-          fill: $_gray;
-          margin-right: 15px;
+          width: 23px;
+          height: 18px;
+          fill: $_blue;
         }
 
-        h4 {
-          font-weight: 600;
-          font-size: 16px;
-          color: $_gray_5;
+        .logo {
+          img {
+            width: 110px;
+          }
         }
+      }
 
-        p {
-          @include fontsize(10);
-          margin-top: 5px;
-        }
+      .area-nav {
+        width: 73%;
+        height: 100%;
+        @include display-flex;
 
-        &:hover {
-          border-bottom: 3px solid $_blue;
+        a {
+          width: 50%;
+          height: 100%;
+          padding: 0 40px;
+          border-bottom: 3px solid $_white;
+          cursor: pointer;
+          @include display-flex(wrap, center, flex-start);
           @include transition;
+
+          &:first-child {
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+          }
+
+          svg {
+            width: 25px;
+            height: 25px;
+            fill: $_gray;
+            margin-right: 15px;
+          }
+
+          h4 {
+            font-weight: 600;
+            font-size: 16px;
+            color: $_gray_5;
+          }
+
+          p {
+            @include fontsize(10);
+            margin-top: 5px;
+          }
+
+          &:hover {
+            border-bottom: 3px solid $_blue;
+            @include transition;
+          }
         }
       }
-    }
 
-    .area-login {
-      width: 10%;
-      height: 100%;
-      padding: 0 15px;
-      border-left: 1px solid rgba(0, 0, 0, 0.12);
-      @include display-flex;
+      .area-login {
+        width: 10%;
+        height: 100%;
+        padding: 0 10px;
+        border-left: 1px solid rgba(0, 0, 0, 0.12);
+        @include display-flex;
 
-      .avatar-cliente {
-        width: 40px;
-        height: 40px;
-        font-size: 12px;
-        margin-right: 20px;
-      }
+        .avatar {
+          width: 40px;
+          height: 40px;
+          font-size: 12px;
+          margin-right: 20px;
+        }
 
-      img {
-        width: 10px;
-        height: 6px;
+        img {
+          width: 10px;
+          height: 6px;
+        }
       }
     }
   }
 
   section {
     &.home {
-      .topo {
+      .header_home {
         width: 70%;
         height: 150px;
         margin: 150px auto 0;
@@ -807,7 +809,7 @@ footer {
         .content {
           width: 85%;
 
-          .avatar-cliente {
+          .avatar {
             width: 90px;
             height: 90px;
             font-size: 24px;
@@ -816,7 +818,7 @@ footer {
         }
       }
 
-      .dados-score {
+      .infos_home {
         width: 60%;
         margin: 0 auto;
 
@@ -824,28 +826,28 @@ footer {
           width: 100%;
           @include display-flex(wrap, flex-start, space-between);
 
-          .dados-cliente {
+          .cliente_info {
             width: calc(50% - 10px);
 
-            .nome-cliente {
+            .cliente_nome {
               font-size: 20px;
               line-height: 35px;
               margin-bottom: 20px;
             }
 
-            .consulta {
+            .cliente_consulta {
               font-size: 12px;
               margin-bottom: 10px;
             }
 
-            .score {
+            .cliente_score {
               font-size: 24px;
               letter-spacing: 0px;
 
               span {
                 font-size: 14px;
 
-                &.valor-score {
+                &.cliente_score-valor {
                   font-size: 30px;
                 }
               }
@@ -854,7 +856,7 @@ footer {
             .wrap {
               @include display-flex(wrap, center, flex-start);
 
-              .situacao-score {
+              .cliente_situacao {
                 border-radius: 50px;
                 font-size: 12px;
                 padding: 3px 15px;
@@ -870,7 +872,7 @@ footer {
       }
     }
 
-    &.cartao {
+    &.recomendacoes {
       width: 100%;
       height: auto;
 
@@ -879,7 +881,7 @@ footer {
         margin-bottom: 25px;
       }
 
-      &.cartao-destaque {
+      &.recomendacao_cartao-destaque {
         .content {
           width: 60%;
 
@@ -897,7 +899,7 @@ footer {
         }
       }
 
-      &.cartao-credito {
+      &.recomendacao_cartao-credito {
         .content {
           .lista-cartao {
             @include display-flex(wrap, flex-start, space-between);
@@ -909,7 +911,7 @@ footer {
         }
       }
 
-      &.cartao-pre-pago {
+      &.recomendacao_cartao-pre-pago {
         .content {
           .lista-cartao {
             @include display-flex(wrap, flex-start, space-between);
@@ -939,7 +941,7 @@ footer {
       }
     }
 
-    &.final {
+    &.aguarde {
       padding: 50px 0;
 
       .content {
@@ -947,11 +949,11 @@ footer {
         @include display-flex(wrap, center, space-between);
       }
 
-      .final-imagem, .final-texto {
+      .aguarde_imagem, .aguarde_texto {
         //width: 50%;
       }
 
-      .final-imagem {
+      .aguarde_imagem {
         width: calc(60% - 10px);
         height: 205px;
         background: url('../imagem/bg/foregon-fit__rodape.svg') center top no-repeat;
@@ -959,7 +961,7 @@ footer {
         background-position-x: 0;
       }
 
-      .final-texto {
+      .aguarde_texto {
         width: 40%;
         text-align: justify;
         margin: 0;
@@ -973,6 +975,22 @@ footer {
         li {
           a {
             font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    .menu-desktop {
+      .area-menu {
+        padding: 0 15px;
+
+        .logo {
+          img {
+            width: 140px;
           }
         }
       }
